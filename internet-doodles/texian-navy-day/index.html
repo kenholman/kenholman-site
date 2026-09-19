@@ -1,1 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Texian Navy Day | Internet Doodle</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #f4f7fb;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #texian-navy-doodle {
+      --tn-navy: #082b55;
+      --tn-navy-dark: #041d3a;
+      --tn-red: #b82832;
+      --tn-cream: #fbf2dc;
+
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      max-width: 1080px;
+      height: clamp(230px, 42vw, 268px);
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid #cfd8e2;
+      border-radius: 11px;
+      background: #9cc7df;
+      box-shadow: 0 2px 5px rgba(7, 31, 58, 0.16);
+      color: var(--tn-navy-dark);
+    }
+
+    #texian-navy-doodle,
+    #texian-navy-doodle * {
+      box-sizing: border-box;
+    }
+
+    #texian-navy-doodle .tn-background {
+      position: absolute;
+      z-index: 0;
+      inset: 0 0 40px;
+      width: 100%;
+      height: calc(100% - 40px);
+      object-fit: cover;
+      object-position: 50% 50%;
+      pointer-events: none;
+    }
+
+    #texian-navy-doodle::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0 34% 40px 0;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 250, 235, 0.44) 0%,
+        rgba(255, 250, 235, 0.18) 48%,
+        rgba(255, 250, 235, 0) 100%
+      );
+    }
+
+    #texian-navy-doodle .tn-copy {
+      position: absolute;
+      z-index: 6;
+      top: 20px;
+      left: 23px;
+      width: 47%;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    #texian-navy-doodle .tn-kicker {
+      margin: 0 0 5px;
+      color: #3b5065;
+      font: 700 0.66rem/1.2 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    #texian-navy-doodle .tn-title {
+      margin: 0;
+      color: var(--tn-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 5.5vw, 2.55rem);
+      font-weight: 700;
+      line-height: 0.91;
+      text-transform: uppercase;
+    }
+
+    #texian-navy-doodle .tn-rule {
+      width: min(100%, 245px);
+      height: 3px;
+      margin: 10px 0 7px;
+      border-radius: 999px;
+      background: var(--tn-red);
+    }
+
+    #texian-navy-doodle .tn-date {
+      margin: 0;
+      color: #183b5d;
+      font: 700 clamp(0.76rem, 1.6vw, 0.96rem)/1.25 Georgia, "Times New Roman", serif;
+    }
+
+    #texian-navy-doodle .tn-water {
+      position: absolute;
+      z-index: 2;
+      left: -12%;
+      right: -12%;
+      bottom: 40px;
+      height: 39%;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.34;
+      mix-blend-mode: screen;
+    }
+
+    #texian-navy-doodle .tn-water-glint {
+      position: absolute;
+      left: -10%;
+      width: 120%;
+      height: 48%;
+      background-image: repeating-radial-gradient(
+        ellipse at 50% 110%,
+        transparent 0 19px,
+        rgba(255, 255, 255, 0.46) 20px 21px,
+        transparent 22px 43px
+      );
+      background-size: 95px 31px;
+    }
+
+    #texian-navy-doodle .tn-water-glint:first-child {
+      top: 5%;
+      animation: tn-water-left 24s linear infinite;
+    }
+
+    #texian-navy-doodle .tn-water-glint:last-child {
+      top: 43%;
+      opacity: 0.58;
+      animation: tn-water-right 31s linear infinite;
+    }
+
+    #texian-navy-doodle .tn-ship-stage {
+      position: absolute;
+      z-index: 4;
+      top: 2%;
+      right: 0.5%;
+      height: 89%;
+      aspect-ratio: 1200 / 790;
+      pointer-events: none;
+      animation: tn-ship-bob 8s ease-in-out infinite;
+    }
+
+    #texian-navy-doodle .tn-ship {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    #texian-navy-doodle .tn-flag {
+      position: absolute;
+      z-index: 2;
+      top: -1.5%;
+      left: 72.5%;
+      width: 25%;
+      transform-origin: 2% 48%;
+      animation: tn-flag-wave 4.4s ease-in-out infinite;
+    }
+
+    #texian-navy-doodle .tn-motion-toggle {
+      position: absolute;
+      z-index: 10;
+      right: 8px;
+      bottom: 48px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255,255,255,0.72);
+      border-radius: 50%;
+      background: rgba(4,29,58,0.72);
+      color: white;
+      cursor: pointer;
+    }
+
+    #texian-navy-doodle .tn-ticker {
+      position: absolute;
+      z-index: 8;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 40px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid rgba(105,77,36,0.28);
+      background: linear-gradient(180deg, #fff9eb, var(--tn-cream));
+      color: var(--tn-navy);
+      font: 700 0.76rem/1.2 Georgia, "Times New Roman", serif;
+      white-space: nowrap;
+    }
+
+    #texian-navy-doodle .tn-ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tn-ticker 52s linear infinite;
+    }
+
+    #texian-navy-doodle .tn-ticker-copy {
+      display: flex;
+      flex: none;
+      padding-right: 32px;
+    }
+
+    #texian-navy-doodle .tn-fact {
+      margin-right: 32px;
+    }
+
+    #texian-navy-doodle .tn-star {
+      margin-right: 8px;
+      color: var(--tn-red);
+    }
+
+    #texian-navy-doodle.tn-paused .tn-water-glint,
+    #texian-navy-doodle.tn-paused .tn-ship-stage,
+    #texian-navy-doodle.tn-paused .tn-flag,
+    #texian-navy-doodle.tn-paused .tn-ticker-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes tn-ship-bob {
+      0%, 100% { transform: translateY(0) rotate(-0.12deg); }
+      50% { transform: translateY(2.5px) rotate(0.18deg); }
+    }
+
+    @keyframes tn-flag-wave {
+      0%, 100% { transform: rotateY(0deg) skewY(0deg) scaleX(1); }
+      50% { transform: rotateY(-8deg) skewY(-1.2deg) scaleX(0.97); }
+    }
+
+    @keyframes tn-water-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-95px); }
+    }
+
+    @keyframes tn-water-right {
+      from { transform: translateX(-95px); }
+      to { transform: translateX(0); }
+    }
+
+    @keyframes tn-ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section id="texian-navy-doodle">
+
+    <img
+      class="tn-background"
+      src="assets/texian-navy-gulf-background.webp"
+      alt=""
+    >
+
+    <div class="tn-copy">
+      <p class="tn-kicker">The Republic of Texas</p>
+      <h1 class="tn-title">Texian<br>Navy Day</h1>
+      <div class="tn-rule"></div>
+      <p class="tn-date">Saturday, September 19, 2026</p>
+    </div>
+
+    <div class="tn-water">
+      <span class="tn-water-glint"></span>
+      <span class="tn-water-glint"></span>
+    </div>
+
+    <div class="tn-ship-stage">
+      <img
+        class="tn-ship"
+        src="assets/texian-navy-schooner.webp"
+        alt=""
+      >
+
+      <img
+        class="tn-flag"
+        src="assets/texian-navy-flag.webp"
+        alt=""
+      >
+    </div>
+
+    <button
+      class="tn-motion-toggle"
+      type="button"
+      aria-label="Pause animation"
+    >
+      Ⅱ
+    </button>
+
+    <div class="tn-ticker">
+      <div class="tn-ticker-track">
+
+        <div class="tn-ticker-copy">
+          <span class="tn-fact"><span class="tn-star">★</span>The First Texas Navy was authorized in November 1835</span>
+          <span class="tn-fact"><span class="tn-star">★</span>Control of the Gulf kept supplies and volunteers moving to Texas</span>
+          <span class="tn-fact"><span class="tn-star">★</span>The Second Texas Navy served the Republic from 1839 to 1843</span>
+          <span class="tn-fact"><span class="tn-star">★</span>September 19 is Texian Navy Day</span>
+        </div>
+
+        <div class="tn-ticker-copy">
+          <span class="tn-fact"><span class="tn-star">★</span>The First Texas Navy was authorized in November 1835</span>
+          <span class="tn-fact"><span class="tn-star">★</span>Control of the Gulf kept supplies and volunteers moving to Texas</span>
+          <span class="tn-fact"><span class="tn-star">★</span>The Second Texas Navy served the Republic from 1839 to 1843</span>
+          <span class="tn-fact"><span class="tn-star">★</span>September 19 is Texian Navy Day</span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    (function () {
+      var doodle = document.getElementById('texian-navy-doodle');
+      var button = doodle.querySelector('.tn-motion-toggle');
+
+      button.addEventListener('click', function () {
+        var paused = doodle.classList.toggle('tn-paused');
+
+        button.textContent = paused ? '▶' : 'Ⅱ';
+
+        button.setAttribute(
+          'aria-label',
+          paused ? 'Play animation' : 'Pause animation'
+        );
+      });
+    }());
+  </script>
+
+</body>
+</html>
