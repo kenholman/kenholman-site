@@ -1369,22 +1369,7 @@
               a couple of business days.
             </p>
 
-            <ul class="contact-links" aria-label="Contact information">
-              <li>
-                <span class="c-icon" aria-hidden="true">✉️</span>
-                <!-- I will replace this with my actual email address -->
-                <a href="mailto:email@example.com">email@example.com</a>
-              </li>
-              <li>
-                <span class="c-icon" aria-hidden="true">💼</span>
-                <!-- I will replace this with my LinkedIn URL -->
-                <a href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LinkedIn Profile</a>
-              </li>
-              <li>
-                <span class="c-icon" aria-hidden="true">📍</span>
-                <span>Texas, USA</span>
-              </li>
-            </ul>
+
           </div><!-- /contact-copy -->
 
           <!-- Contact form -->
@@ -1392,13 +1377,12 @@
             NOTE: This form requires a server-side handler or a service like Formspree/Netlify
             to actually send email. I will configure the action attribute when I deploy.
           -->
-          <form
-            class="contact-form"
-            action="#"
-            method="POST"
-            aria-label="Contact form"
-            novalidate
-          >
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xwlppjgl"
+              method="POST"
+              aria-label="Contact form"
+            >
 
             <div class="form-group">
               <label for="contact-name">Name</label>
@@ -1424,15 +1408,6 @@
               >
             </div>
 
-            <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input
-                type="text"
-                id="contact-subject"
-                name="subject"
-                placeholder="What is this about?"
-              >
-            </div>
 
             <div class="form-group">
               <label for="contact-message">Message</label>
@@ -1551,62 +1526,6 @@
         if (nav && !nav.contains(e.target) && menu.classList.contains('is-open')) {
           closeMenu();
         }
-      });
-
-    }());
-
-
-    /* -------------------------------------------------------
-       BASIC CONTACT FORM VALIDATION
-       (I will replace this with real submission logic when I
-       connect this form to a server-side handler or service.)
-    ------------------------------------------------------- */
-    (function () {
-
-      var form = document.querySelector('.contact-form');
-      if (!form) return;
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        var name    = form.querySelector('#contact-name');
-        var email   = form.querySelector('#contact-email');
-        var message = form.querySelector('#contact-message');
-
-        var valid = true;
-
-        /* Simple presence check */
-        [name, email, message].forEach(function (field) {
-          if (!field) return;
-          if (!field.value.trim()) {
-            field.style.borderColor = '#c0392b';
-            valid = false;
-          } else {
-            field.style.borderColor = '';
-          }
-        });
-
-        /* Basic email format check */
-        if (email && email.value.trim()) {
-          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(email.value.trim())) {
-            email.style.borderColor = '#c0392b';
-            valid = false;
-          }
-        }
-
-        if (!valid) {
-          /* I will improve this with inline error messages once I finalize the form handler */
-          alert('Please fill in all required fields with valid information.');
-          return;
-        }
-
-        /*
-          I will add actual form submission here — e.g. fetch() to Formspree or
-          a server endpoint — once the deployment target is confirmed.
-        */
-        alert('Thank you for your message. I will be in touch.');
-        form.reset();
       });
 
     }());
