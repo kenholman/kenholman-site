@@ -516,11 +516,11 @@
     /* -------------------------------------------------------
        PROJECTS SECTION
     ------------------------------------------------------- */
-    #projects .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.75rem;
-    }
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
 
     .project-card {
       background-color: var(--color-card);
@@ -786,7 +786,9 @@
        RESPONSIVE — TABLET & MOBILE
     ------------------------------------------------------- */
     @media (max-width: 860px) {
-
+#projects .projects-grid {
+  grid-template-columns: 1fr;
+}
       :root {
         --section-gap: 60px;
       }
