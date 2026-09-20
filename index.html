@@ -859,7 +859,18 @@
         grid-template-columns: 1fr;
       }
     }
+/* Scale Internet Doodle preview for mobile */
+.doodle-preview {
+  height: 200px;
+  overflow: hidden;
+}
 
+.doodle-preview iframe {
+  width: 300%;
+  height: 600px;
+  transform: scale(0.333333);
+  transform-origin: top left;
+}
   </style>
 </head>
 
