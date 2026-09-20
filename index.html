@@ -427,24 +427,12 @@
       border-radius: var(--radius);
     }
 
-.meta-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-  color: var(--color-accent);
-}
-
-.meta-icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+    .meta-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
 
     .meta-label {
       font-size: 0.75rem;
@@ -484,23 +472,11 @@
       transform: translateY(-2px);
     }
 
-.skill-icon {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 0.875rem;
-  color: var(--color-accent);
-}
-
-.skill-icon svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+    .skill-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.875rem;
+      line-height: 1;
+    }
 
     .skill-title {
       font-family: var(--font-heading);
@@ -1010,338 +986,322 @@
         </p>
       </div><!-- /about-bio -->
 
-<!-- Meta sidebar -->
-<div class="about-meta" aria-label="Quick facts">
+      <!-- Meta sidebar -->
+      <div class="about-meta" aria-label="Quick facts">
 
-  <div class="meta-item">
-    <span class="meta-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M3 10h18"></path>
-        <path d="M5 10v8"></path>
-        <path d="M9 10v8"></path>
-        <path d="M15 10v8"></path>
-        <path d="M19 10v8"></path>
-        <path d="M3 18h18"></path>
-        <path d="M2 21h20"></path>
-        <path d="M12 3 2 8h20L12 3z"></path>
-      </svg>
-    </span>
-    <div>
-      <div class="meta-label">Current Role</div>
-      <div class="meta-value">Web Administrator</div>
-    </div>
-  </div>
-
-  <div class="meta-item">
-    <span class="meta-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9"></circle>
-        <path d="M3 12h18"></path>
-        <path d="M12 3c3 3 4 6 4 9s-1 6-4 9"></path>
-        <path d="M12 3c-3 3-4 6-4 9s1 6 4 9"></path>
-      </svg>
-    </span>
-    <div>
-      <div class="meta-label">Core Skills</div>
-      <div class="meta-value">HTML, CSS, JavaScript, CMS</div>
-    </div>
-  </div>
-
-  <div class="meta-item">
-    <span class="meta-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9"></circle>
-        <circle cx="12" cy="12" r="5"></circle>
-        <circle cx="12" cy="12" r="1"></circle>
-      </svg>
-    </span>
-    <div>
-      <div class="meta-label">Focus</div>
-      <div class="meta-value">Accessibility &amp; Maintainability</div>
-    </div>
-  </div>
-
-  <div class="meta-item">
-    <span class="meta-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <rect x="5" y="4" width="14" height="17" rx="2"></rect>
-        <path d="M9 4V2h6v2"></path>
-        <path d="m8 11 2 2 4-4"></path>
-        <path d="M8 17h8"></path>
-      </svg>
-    </span>
-    <div>
-      <div class="meta-label">Approach</div>
-      <div class="meta-value">Practical, organized, maintainable</div>
-    </div>
-  </div>
-
-  <div class="meta-item">
-    <span class="meta-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"></path>
-        <circle cx="12" cy="10" r="2.5"></circle>
-      </svg>
-    </span>
-    <div>
-      <div class="meta-label">Location</div>
-      <div class="meta-value">Texas, USA</div>
-    </div>
-  </div>
-
-</div><!-- /about-meta -->
-<!-- ==========================================================
-     SKILLS SECTION
-========================================================== -->
-<section id="skills" class="section section--alt" aria-labelledby="skills-heading">
-  <div class="container">
-
-    <span class="section-label">What I Do</span>
-    <h2 class="section-title" id="skills-heading">Skills &amp; Capabilities</h2>
-    <div class="divider" aria-hidden="true"></div>
-
-    <p class="section-intro">
-      My work combines front-end development with the practical demands of administering,
-      maintaining, and improving real-world web systems.
-    </p>
-
-    <div class="skills-grid" role="list">
-
-      <!-- Skill card: HTML -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">📄</div>
-        <h3 class="skill-title">HTML &amp; Semantic Structure</h3>
-        <p class="skill-desc">
-          I build well-structured, standards-based pages with semantic markup that supports
-          accessibility, search, maintainability, and reliable presentation across platforms.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">HTML5</span>
-          <span class="tag">Semantic HTML</span>
-          <span class="tag">ARIA</span>
-          <span class="tag">SEO</span>
-        </div>
-      </article>
-
-      <!-- Skill card: CSS -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">🎨</div>
-        <h3 class="skill-title">CSS &amp; Responsive Design</h3>
-        <p class="skill-desc">
-          I create responsive interfaces using modern CSS as well as established frameworks,
-          with an emphasis on consistency, readability, and maintainable design systems.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">CSS3</span>
-          <span class="tag">Flexbox</span>
-          <span class="tag">Grid</span>
-          <span class="tag">Bootstrap</span>
-          <span class="tag">Tailwind CSS</span>
-        </div>
-      </article>
-
-      <!-- Skill card: JavaScript -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">⚙️</div>
-        <h3 class="skill-title">JavaScript &amp; Interactivity</h3>
-        <p class="skill-desc">
-          I use JavaScript to enhance interfaces, automate front-end behavior, and add
-          purposeful interactivity while keeping implementations understandable and maintainable.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">JavaScript</span>
-          <span class="tag">ES6+</span>
-          <span class="tag">DOM</span>
-          <span class="tag">Events</span>
-        </div>
-      </article>
-
-      <!-- Skill card: CMS -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">🗂️</div>
-        <h3 class="skill-title">CMS Administration</h3>
-        <p class="skill-desc">
-          I administer CMS-driven websites, working with templates, content architecture,
-          publishing workflows, forms, permissions, migrations, and the needs of content editors.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">Umbraco</span>
-          <span class="tag">Templates</span>
-          <span class="tag">Workflows</span>
-          <span class="tag">Forms</span>
-          <span class="tag">Content Architecture</span>
-        </div>
-      </article>
-
-      <!-- Skill card: Legacy systems -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">🛠️</div>
-        <h3 class="skill-title">Legacy Systems &amp; Modernization</h3>
-        <p class="skill-desc">
-          I maintain and modernize established web systems incrementally, improving aging
-          templates, layouts, and front-end code without disrupting the services people rely on.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">Dreamweaver</span>
-          <span class="tag">DWT Templates</span>
-          <span class="tag">Refactoring</span>
-          <span class="tag">Migration</span>
-        </div>
-      </article>
-
-      <!-- Skill card: Accessibility -->
-      <article class="skill-card" role="listitem">
-        <div class="skill-icon" aria-hidden="true">♿</div>
-        <h3 class="skill-title">Accessibility &amp; Usability</h3>
-        <p class="skill-desc">
-          I incorporate accessibility into structure, navigation, content, forms, and
-          interface behavior so that usability is considered throughout the life of a site.
-        </p>
-        <div class="tag-list" aria-label="Related technologies">
-          <span class="tag">WCAG</span>
-          <span class="tag">ARIA</span>
-          <span class="tag">Keyboard Navigation</span>
-          <span class="tag">Semantic HTML</span>
-        </div>
-      </article>
-
-    </div><!-- /skills-grid -->
-
-  </div>
-</section><!-- /section#skills -->
-
-<!-- ==========================================================
-     PROJECTS SECTION
-========================================================== -->
-<section id="projects" class="section" aria-labelledby="projects-heading">
-  <div class="container">
-
-    <span class="section-label">Selected Work</span>
-    <h2 class="section-title" id="projects-heading">Featured Projects</h2>
-    <div class="divider" aria-hidden="true"></div>
-
-    <p class="section-intro">
-      Selected work across CMS administration, website modernization,
-      intranet development, analytics, accessibility, and front-end architecture.
-    </p>
-
-    <div class="projects-grid" role="list">
-
-      <!-- Project 1 -->
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-badge" aria-hidden="true">🌐</div>
+        <div class="meta-item">
+          <span class="meta-icon" aria-hidden="true">🏛️</span>
           <div>
-            <h3 class="project-title">Public Website Administration &amp; Modernization</h3>
-            <span class="project-status status-active">● Active</span>
+            <div class="meta-label">Current Role</div>
+            <div class="meta-value">Web Administrator</div>
           </div>
         </div>
 
-        <div class="project-body">
-          <p class="project-desc">
-            Administration and ongoing modernization of a large public-facing CMS website,
-            including template development, content architecture, accessibility improvements,
-            responsive design, forms, publishing workflows, and platform migrations.
-          </p>
-
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">Umbraco</span>
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">WCAG</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-badge" aria-hidden="true">📁</div>
+        <div class="meta-item">
+          <span class="meta-icon" aria-hidden="true">🌐</span>
           <div>
-            <h3 class="project-title">Enterprise Intranet Modernization</h3>
-            <span class="project-status status-ongoing">● Ongoing</span>
+            <div class="meta-label">Core Skills</div>
+            <div class="meta-value">HTML, CSS, JavaScript, CMS</div>
           </div>
         </div>
 
-        <div class="project-body">
-          <p class="project-desc">
-            Maintenance and modernization of a legacy organizational intranet, including
-            shared templates, responsive interfaces, navigation, search, content structure,
-            and incremental front-end upgrades designed to preserve stability for daily users.
-          </p>
-
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">Dreamweaver</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-badge" aria-hidden="true">📊</div>
+        <div class="meta-item">
+          <span class="meta-icon" aria-hidden="true">♿</span>
           <div>
-            <h3 class="project-title">Web Analytics &amp; Reporting</h3>
-            <span class="project-status status-active">● Active</span>
+            <div class="meta-label">Focus</div>
+            <div class="meta-value">Accessibility &amp; Maintainability</div>
           </div>
         </div>
 
-        <div class="project-body">
-          <p class="project-desc">
-            Ongoing analysis of public website traffic and user behavior, translating
-            analytics into practical reporting and recommendations for content,
-            navigation, usability, and site structure.
-          </p>
-
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">GA4</span>
-            <span class="tag">Analytics</span>
-            <span class="tag">Reporting</span>
-            <span class="tag">Content Strategy</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card" role="listitem">
-        <div class="project-header">
-          <div class="project-badge" aria-hidden="true">💻</div>
+        <div class="meta-item">
+          <span class="meta-icon" aria-hidden="true">📋</span>
           <div>
-            <h3 class="project-title">Personal Portfolio</h3>
-            <span class="project-status status-completed">● Complete</span>
+            <div class="meta-label">Approach</div>
+            <div class="meta-value">Practical, organized, maintainable</div>
           </div>
         </div>
 
-        <div class="project-body">
-          <p class="project-desc">
-            A lightweight, responsive portfolio built from the ground up with semantic
-            HTML, modern CSS, and vanilla JavaScript. Designed for accessibility,
-            performance, straightforward maintenance, and minimal dependencies.
-          </p>
-
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Responsive Design</span>
-            <span class="tag">Accessibility</span>
+        <div class="meta-item">
+          <span class="meta-icon" aria-hidden="true">📍</span>
+          <div>
+            <div class="meta-label">Location</div>
+            <div class="meta-value">Texas, USA</div>
           </div>
         </div>
 
-        <div class="project-footer">
-          <a href="#hero" class="btn btn-primary">View Project</a>
-        </div>
-      </article>
+      </div><!-- /about-meta -->
 
-    </div><!-- /projects-grid -->
+    </div><!-- /about-grid -->
 
   </div>
-</section><!-- /section#projects -->
+</section><!-- /section#about -->
+
+
+    <!-- ==========================================================
+         SKILLS SECTION
+    ========================================================== -->
+    <section id="skills" class="section section--alt" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <span class="section-label">What I Do</span>
+        <h2 class="section-title" id="skills-heading">Skills &amp; Capabilities</h2>
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="section-intro">
+          My work combines front-end development with the practical demands of administering,
+          maintaining, and improving real-world web systems.
+        </p>
+
+        <div class="skills-grid" role="list">
+
+          <!-- Skill card: HTML -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">📄</div>
+            <h3 class="skill-title">HTML &amp; Semantic Structure</h3>
+            <p class="skill-desc">
+              I build well-structured, standards-based pages with semantic markup that supports
+              accessibility, search, maintainability, and reliable presentation across platforms.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">HTML5</span>
+              <span class="tag">Semantic HTML</span>
+              <span class="tag">ARIA</span>
+              <span class="tag">SEO</span>
+            </div>
+          </article>
+
+          <!-- Skill card: CSS -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🎨</div>
+            <h3 class="skill-title">CSS &amp; Responsive Design</h3>
+            <p class="skill-desc">
+              I create responsive interfaces using modern CSS as well as established frameworks,
+              with an emphasis on consistency, readability, and maintainable design systems.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">CSS3</span>
+              <span class="tag">Flexbox</span>
+              <span class="tag">Grid</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </article>
+
+          <!-- Skill card: JavaScript -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">⚙️</div>
+            <h3 class="skill-title">JavaScript &amp; Interactivity</h3>
+            <p class="skill-desc">
+              I use JavaScript to enhance interfaces, automate front-end behavior, and add
+              purposeful interactivity while keeping implementations understandable and maintainable.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">JavaScript</span>
+              <span class="tag">ES6+</span>
+              <span class="tag">DOM</span>
+              <span class="tag">Events</span>
+            </div>
+          </article>
+
+          <!-- Skill card: CMS -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🗂️</div>
+            <h3 class="skill-title">CMS Administration</h3>
+            <p class="skill-desc">
+              I administer CMS-driven websites, working with templates, content architecture,
+              publishing workflows, forms, permissions, migrations, and the needs of content editors.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">Umbraco</span>
+              <span class="tag">Templates</span>
+              <span class="tag">Workflows</span>
+              <span class="tag">Forms</span>
+              <span class="tag">Content Architecture</span>
+            </div>
+          </article>
+
+          <!-- Skill card: Legacy systems -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">🛠️</div>
+            <h3 class="skill-title">Legacy Systems &amp; Modernization</h3>
+            <p class="skill-desc">
+              I maintain and modernize established web systems incrementally, improving aging
+              templates, layouts, and front-end code without disrupting the services people rely on.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">Dreamweaver</span>
+              <span class="tag">DWT Templates</span>
+              <span class="tag">Refactoring</span>
+              <span class="tag">Migration</span>
+            </div>
+          </article>
+
+          <!-- Skill card: Accessibility -->
+          <article class="skill-card" role="listitem">
+            <div class="skill-icon" aria-hidden="true">♿</div>
+            <h3 class="skill-title">Accessibility &amp; Usability</h3>
+            <p class="skill-desc">
+              I incorporate accessibility into structure, navigation, content, forms, and
+              interface behavior so that usability is considered throughout the life of a site.
+            </p>
+            <div class="tag-list" aria-label="Related technologies">
+              <span class="tag">WCAG</span>
+              <span class="tag">ARIA</span>
+              <span class="tag">Keyboard Navigation</span>
+              <span class="tag">Semantic HTML</span>
+            </div>
+          </article>
+
+        </div><!-- /skills-grid -->
+
+      </div>
+    </section><!-- /section#skills -->
+
+
+    <!-- ==========================================================
+         PROJECTS SECTION
+    ========================================================== -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <span class="section-label">Selected Work</span>
+        <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="section-intro">
+          Selected work across CMS administration, website modernization,
+          intranet development, analytics, accessibility, and front-end architecture.
+        </p>
+
+        <div class="projects-grid" role="list">
+
+          <!-- Project 1 -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <div class="project-badge" aria-hidden="true">🌐</div>
+              <div>
+                <h3 class="project-title">Public Website Administration &amp; Modernization</h3>
+                <span class="project-status status-active">● Active</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Administration and ongoing modernization of a large public-facing CMS website,
+                including template development, content architecture, accessibility improvements,
+                responsive design, forms, publishing workflows, and platform migrations.
+              </p>
+
+              <div class="tag-list" aria-label="Technologies used">
+                <span class="tag">Umbraco</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">WCAG</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="btn btn-primary" aria-disabled="true" style="opacity:0.5; cursor:default;">In Progress</span>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <div class="project-badge" aria-hidden="true">📁</div>
+              <div>
+                <h3 class="project-title">Enterprise Intranet Modernization</h3>
+                <span class="project-status status-ongoing">● Ongoing</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Maintenance and modernization of a legacy organizational intranet, including
+                shared templates, responsive interfaces, navigation, search, content structure,
+                and incremental front-end upgrades designed to preserve stability for daily users.
+              </p>
+
+              <div class="tag-list" aria-label="Technologies used">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Dreamweaver</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="btn btn-primary" aria-disabled="true" style="opacity:0.5; cursor:default;">Internal</span>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <div class="project-badge" aria-hidden="true">📊</div>
+              <div>
+                <h3 class="project-title">Web Analytics &amp; Reporting</h3>
+                <span class="project-status status-active">● Active</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                Ongoing analysis of public website traffic and user behavior, translating
+                analytics into practical reporting and recommendations for content,
+                navigation, usability, and site structure.
+              </p>
+
+              <div class="tag-list" aria-label="Technologies used">
+                <span class="tag">GA4</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">Reporting</span>
+                <span class="tag">Content Strategy</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <span class="btn btn-primary" aria-disabled="true" style="opacity:0.5; cursor:default;">Internal</span>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" role="listitem">
+            <div class="project-header">
+              <div class="project-badge" aria-hidden="true">💻</div>
+              <div>
+                <h3 class="project-title">Personal Portfolio</h3>
+                <span class="project-status status-completed">● Complete</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-desc">
+                A lightweight, responsive portfolio built from the ground up with semantic
+                HTML, modern CSS, and vanilla JavaScript. Designed for accessibility,
+                performance, straightforward maintenance, and minimal dependencies.
+              </p>
+
+              <div class="tag-list" aria-label="Technologies used">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive Design</span>
+                <span class="tag">Accessibility</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="#hero" class="btn btn-primary">View Project</a>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+
+      </div>
+    </section><!-- /section#projects -->
 <!-- ==========================================================
      INTERNET DOODLES SECTION
 ========================================================== -->
@@ -1431,10 +1391,6 @@
           </div><!-- /contact-copy -->
 
           <!-- Contact form -->
-          <!--
-            NOTE: This form requires a server-side handler or a service like Formspree/Netlify
-            to actually send email. I will configure the action attribute when I deploy.
-          -->
 <form
   id="contact-form"
   class="contact-form"
